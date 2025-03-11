@@ -28,3 +28,30 @@ The main contributions of our work:
 <p align="center">
     <img src="figures/cl_vis.png" width="90%"> <br>
 </p>
+
+To further illustrate the effectiveness of the Content-Aware strategy in extracting content features, we visualize the largest-scale feature maps output by the Content Decoder. Since the LEVIR-CD dataset primarily focuses on building changes, the content features predominantly represent structural information related to buildings). 
+
+<p align="center">
+    <img src="figures/content_res.png" width="90%"> <br>
+</p>
+
+## 🏁 Get Start
+### Installation
+1. Clone the repository:
+```bash
+git clone https://github.com/wifiBlack/CFNet.git
+cd CFNet
+```
+
+2. Create the environment
+
+```bash
+conda env create -f requirements.yml
+```
+
+3. Prepare the checkpoints
+
+```bash
+git clone https://huggingface.co/wifibk/CFNet
+mv ./CFNet ./checkpoint
+```

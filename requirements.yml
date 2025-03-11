@@ -1,4 +1,4 @@
-name: wifi_test
+name: cfnet_env
 channels:
   - pytorch
   - nvidia
