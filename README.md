@@ -11,7 +11,7 @@ Official repository for the paper ["Can We Generate Images with CoT? Let's Verif
 Change detection plays a crucial role in remote sensing, enabling the identification and analysis of temporal changes in the same geographical area. However, bi-temporal remote sensing images often exhibit significant style variations due to differences in acquisition conditions. These unpredictable variations pose a challenge to deep neural networks (DNNs), affecting their ability to accurately detect changes.
 
 <p align="center">
-    <img src="figures/1st.png" width="90%"> <br>
+    <img src="figures/1st.png" width="70%"> <br>
 </p>
 
 To address this, we propose **Content Focuser Network (CFNet)**. CFNet achieves state-of-the-art performance on three well-known change detection datasets: **CLCD (F1: 81.41%, IoU: 68.65%)**, **LEVIR-CD (F1: 92.18%, IoU: 85.49%)**, and **SYSU-CD (F1: 82.89%, IoU: 70.78%)**. 
