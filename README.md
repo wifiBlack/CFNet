@@ -1,5 +1,5 @@
 # CFNet: Optimizing Remote Sensing 🗺️ Change Detection 🕵 through Content-Aware Enhancement
-Official repository for the paper ["Can We Generate Images with CoT? Let's Verify and Reinforce Image Generation Step by Step"].
+Official repository for the paper ["CFNet: Optimizing Remote Sensing Change Detection through Content-Aware Enhancement"].
 
 [[🤗Checkpoints](https://huggingface.co/wifibk/CFNet/tree/main)]
 
@@ -29,7 +29,7 @@ The main contributions of our work:
     <img src="figures/cl_vis.png" width="90%"> <br>
 </p>
 
-To further illustrate the effectiveness of the Content-Aware strategy in extracting content features, we visualize the largest-scale feature maps output by the Content Decoder. Since the LEVIR-CD dataset primarily focuses on building changes, the content features predominantly represent structural information related to buildings). 
+**To further illustrate the effectiveness of the Content-Aware strategy in extracting content features**, we visualize the largest-scale feature maps output by the Content Decoder. Since the LEVIR-CD dataset primarily focuses on building changes, the content features predominantly represent structural information related to buildings). 
 
 <p align="center">
     <img src="figures/content_res.png" width="90%"> <br>
