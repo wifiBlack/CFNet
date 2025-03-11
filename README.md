@@ -1,9 +1,9 @@
 # CFNet: Optimizing Remote Sensing 🗺️ Change Detection 🕵 through Content-Aware Enhancement
 Official repository for the paper ["CFNet: Optimizing Remote Sensing Change Detection through Content-Aware Enhancement"].
 
-[[🤗Checkpoints](https://huggingface.co/wifibk/CFNet/tree/main)]
+[[🤗Datasets](https://huggingface.co/datasets/wifibk/CFNet_Datasets/tree/main)]  [[🤗Checkpoints](https://huggingface.co/wifibk/CFNet/tree/main)]
 
-## 🎊 News
+## 🐣 News
 - **[2025.3.11]** We release the code and checkpoints for CFNet 🚀
 - **[2025.3.11]** We release the [arixv paper] 🚀
 
@@ -11,10 +11,10 @@ Official repository for the paper ["CFNet: Optimizing Remote Sensing Change Dete
 Change detection plays a crucial role in remote sensing, enabling the identification and analysis of temporal changes in the same geographical area. However, bi-temporal remote sensing images often exhibit significant style variations due to differences in acquisition conditions. These unpredictable variations pose a challenge to deep neural networks (DNNs), affecting their ability to accurately detect changes.
 
 <p align="center">
-    <img src="figures/1st.png" width="70%"> <br>
+    <img src="figures/Content.png" width="90%"> <br>
 </p>
 
-To address this, we propose **Content Focuser Network (CFNet)**. CFNet achieves state-of-the-art performance on three well-known change detection datasets: **CLCD (F1: 81.41%, IoU: 68.65%)**, **LEVIR-CD (F1: 92.18%, IoU: 85.49%)**, and **SYSU-CD (F1: 82.89%, IoU: 70.78%)**. 
+To address the problem above, we propose **Content Focuser Network (CFNet)**. CFNet achieves state-of-the-art performance on three well-known change detection datasets: **CLCD (F1: 81.41%, IoU: 68.65%)**, **LEVIR-CD (F1: 92.18%, IoU: 85.49%)**, and **SYSU-CD (F1: 82.89%, IoU: 70.78%)**.  🚀 
 
 <p align="center">
     <img src="figures/Architecture.png" width="90%"> <br>
@@ -50,8 +50,84 @@ conda env create -f requirements.yml
 ```
 
 3. Prepare the checkpoints
-
 ```bash
 git clone https://huggingface.co/wifibk/CFNet
 mv ./CFNet ./checkpoint
+```
+
+### Playground
+You can debug **playground.py** step by step to gain a deeper understanding of CFNet. Enjoy exploring it! 🥰
+
+### Prepare Datasets
+You can download the datasets from [CFNet-Datasets](https://huggingface.co/datasets/wifibk/CFNet_Datasets/tree/main).
+
+We provide a preprocessed version of the original datasets to make it easier for you to experiment with CFNet!
+
+### Train
+Run the following command to **train CFNet**. 
+```bash
+# CLCD dataset
+python run.py --data-dir CLCD-processed
+              --log-dir logs_clcd
+              --gpu 0
+              --epochs 100
+              --batch-size 32
+              --num-workers 16
+              --lr 0.0005
+            #   --checkpoints
+
+# LEVIR-CD dataset
+python run.py --data-dir LEVIR-CD-processed
+              --log-dir logs_levircd
+              --gpu 0
+              --epochs 100
+              --batch-size 32
+              --num-workers 16
+              --lr 0.0005
+            #   --checkpoints
+
+# SYSU-CD dataset
+python run.py --data-dir SYSU-CD
+              --log-dir logs_sysucd
+              --gpu 0
+              --epochs 100
+              --batch-size 32
+              --num-workers 16
+              --lr 0.0005
+            #   --checkpoints
+```             
+
+### Test
+Run the following command to **test the performance of CFNet**.
+
+```bash
+# CLCD dataset
+python test.py\
+ --data-dir CLCD
+ --gpu 0\
+ --batch-size 8\
+ --num-workers 8\
+ --checkpoint checkpoints/clcd.pth
+
+ # LEVIR-CD dataset
+python test.py\
+ --data-dir LEVIR-CD
+ --gpu 0\
+ --batch-size 8\
+ --num-workers 8\
+ --checkpoint checkpoints/levir-cd.pth
+
+ # SYSU-CD dataset
+python test.py\
+ --data-dir SYSU-CD
+ --gpu 0\
+ --batch-size 8\
+ --num-workers 8\
+ --checkpoint checkpoints/sysu-cd.pth
+```
+
+## ✅ Citation
+If this project contributes to your research or applications, please consider citing it using the following BibTeX:
+```latex
+
 ```
