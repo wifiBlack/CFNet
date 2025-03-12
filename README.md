@@ -1,11 +1,11 @@
 # CFNet: Optimizing Remote Sensing 🗺️ Change Detection 🕵 through Content-Aware Enhancement
-Official repository for the paper ["CFNet: Optimizing Remote Sensing Change Detection through Content-Aware Enhancement"].
+Official repository for the paper ["CFNet: Optimizing Remote Sensing Change Detection through Content-Aware Enhancement"](https://arxiv.org/pdf/2503.08505).
 
 [[🤗Datasets](https://huggingface.co/datasets/wifibk/CFNet_Datasets/tree/main)]  [[🤗Checkpoints](https://huggingface.co/wifibk/CFNet/tree/main)]
 
 ## 🐣 News
 - **[2025.3.11]** We release the code and checkpoints for CFNet 🚀
-- **[2025.3.11]** We release the [arixv paper] 🚀
+- **[2025.3.11]** We release the [arixv paper](https://arxiv.org/pdf/2503.08505) 🚀
 
 ## 🤔 Addressing Style Variations in Change Detection
 Change detection plays a crucial role in remote sensing, enabling the identification and analysis of temporal changes in the same geographical area. However, bi-temporal remote sensing images often exhibit significant style variations due to differences in acquisition conditions. These unpredictable variations pose a challenge to deep neural networks (DNNs), affecting their ability to accurately detect changes.
