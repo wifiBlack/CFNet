@@ -1,4 +1,4 @@
-name: cfnet_env
+name: cfnet
 channels:
   - pytorch
   - nvidia

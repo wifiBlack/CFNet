@@ -53,7 +53,7 @@ conda activate cfnet_env
 3. Prepare the checkpoints
 ```bash
 git clone https://huggingface.co/wifibk/CFNet
-mv ./CFNet ./checkpoint
+mv ./CFNet ./checkpoints
 ```
 
 ### Playground
@@ -64,38 +64,51 @@ You can download the datasets from [CFNet-Datasets](https://huggingface.co/datas
 
 We provide a preprocessed version of the original datasets to make it easier for you to experiment with CFNet!
 
+You can simply run following commands to **get data from huggingface repository**. The data will be downloaded under CFNet folder.
+```bash
+# CLCD && CLCD-processed
+python get_data.py CLCD.tar.gz
+python get_data.py CLCD-processed.tar.gz
+
+# LEVIR-CD && LEVIR-CD-processed
+python get_data.py LEVIR_CD.tar.gz
+python get_data.py LEVIR-CD-processed.tar.gz
+
+# SYSU-CD
+python get_data.py SYSU-CD.tar.gz
+```
 ### Train
 Run the following command to **train CFNet**. 
 ```bash
 # CLCD dataset
-python run.py --data-dir CLCD-processed
-              --log-dir logs_clcd
-              --gpu 0
-              --epochs 100
-              --batch-size 32
-              --num-workers 16
-              --lr 0.0005
-            #   --checkpoints
+python run.py --data-dir CLCD-processed \
+              --log-dir logs_clcd \
+              --gpu 0 \
+              --epochs 100 \
+              --batch-size 32 \
+              --num-workers 16 \
+              --lr 0.0005 
+            #   --checkpoints \
 
 # LEVIR-CD dataset
-python run.py --data-dir LEVIR-CD-processed
-              --log-dir logs_levircd
-              --gpu 0
-              --epochs 100
-              --batch-size 32
-              --num-workers 16
-              --lr 0.0005
-            #   --checkpoints
+python run.py --data-dir LEVIR-CD-processed \
+              --log-dir logs_levircd \
+              --gpu 0 \
+              --epochs 100 \
+              --batch-size 32 \
+              --num-workers 16 \
+              --lr 0.0005 
+            #   --checkpoints \
 
 # SYSU-CD dataset
-python run.py --data-dir SYSU-CD
-              --log-dir logs_sysucd
-              --gpu 0
-              --epochs 100
-              --batch-size 32
-              --num-workers 16
-              --lr 0.0005
-            #   --checkpoints
+python run.py --data-dir SYSU-CD \
+              --log-dir logs_sysucd \
+              --gpu 0 \
+              --epochs 100 \
+              --batch-size 32 \
+              --num-workers 16 \
+              --lr 0.0005 
+            #   --checkpoints \
 ```             
 
 ### Test
@@ -103,27 +116,27 @@ Run the following command to **test the performance of CFNet**.
 
 ```bash
 # CLCD dataset
-python test.py\
- --data-dir CLCD
- --gpu 0\
- --batch-size 8\
- --num-workers 8\
+python test.py \
+ --data-dir CLCD \
+ --gpu 0 \
+ --batch-size 8 \
+ --num-workers 8 \
  --checkpoint checkpoints/clcd.pth
 
  # LEVIR-CD dataset
-python test.py\
- --data-dir LEVIR-CD
- --gpu 0\
- --batch-size 8\
- --num-workers 8\
+python test.py \
+ --data-dir LEVIR-CD \
+ --gpu 0 \
+ --batch-size 8 \
+ --num-workers 8 \
  --checkpoint checkpoints/levir-cd.pth
 
  # SYSU-CD dataset
-python test.py\
- --data-dir SYSU-CD
- --gpu 0\
- --batch-size 8\
- --num-workers 8\
+python test.py \
+ --data-dir SYSU-CD \
+ --gpu 0 \
+ --batch-size 8 \
+ --num-workers 8 \
  --checkpoint checkpoints/sysu-cd.pth
 ```
 

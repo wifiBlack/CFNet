@@ -27,15 +27,10 @@ class MyDataset(Dataset):
         if os.path.basename(data_path) == 'SYSU-CD':
             self._normalize_A = Normalize(mean=[0.39659573, 0.52846194, 0.46540028], std=[0.20213536, 0.15811189, 0.15296702])
             self._normalize_B = Normalize(mean=[0.40202362, 0.48766126, 0.39895686], std=[0.18235275, 0.15682769, 0.1543715]) 
-        elif os.path.basename(data_path) == 'LEVIR-CD-processed' or os.path.basename(data_path)== '_LEVIR-CD':
+        elif os.path.basename(data_path) == 'LEVIR-CD-processed' or os.path.basename(data_path)== 'LEVIR-CD':
             self._normalize_A = Normalize(mean=[0.45028868, 0.44673658, 0.38134101], std=[0.17450373, 0.16485656, 0.15314709])
             self._normalize_B = Normalize(mean=[0.34578751, 0.33841163, 0.28902323], std=[0.1292925,  0.12592704, 0.11870409])
-        elif os.path.basename(data_path) == 'WHU-CD':
-            # self._normalize_A = Normalize(mean=[0.49051637, 0.44972419, 0.39724921], std=[0.1474837, 0.14372663, 0.14352224])
-            # self._normalize_A = Normalize(mean=[0.49726412, 0.49622711, 0.47865301], std=[0.18394293, 0.17459092, 0.18085868])
-            self._normalize_A = Normalize(mean= [0.48334482, 0.4829116,  0.46035167], std=[0.17954556, 0.16984882, 0.17596323])
-            self._normalize_B = Normalize(mean= [0.48522087, 0.44476541, 0.38734944],std=[0.14298548, 0.13841379, 0.13836961])
-        elif os.path.basename(data_path) == 'CLCD' or  os.path.basename(data_path)=='_CLCD':
+        elif os.path.basename(data_path) == 'CLCD-processed' or  os.path.basename(data_path)=='CLCD':
             self._normalize_A = Normalize(mean=[0.45028868, 0.44673658, 0.38134101], std=[0.17450373, 0.16485656, 0.15314709])
             self._normalize_B = Normalize(mean=[0.34578751, 0.33841163, 0.28902323], std=[0.1292925,  0.12592704, 0.11870409])
     def __getitem__(self, indx):
