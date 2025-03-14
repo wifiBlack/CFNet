@@ -47,6 +47,7 @@ cd CFNet
 
 ```bash
 conda env create -f requirements.yml
+conda activate cfnet_env
 ```
 
 3. Prepare the checkpoints
