@@ -53,7 +53,7 @@ conda activate cfnet_env
 3. Prepare the checkpoints
 ```bash
 git clone https://huggingface.co/wifibk/CFNet
-mv ./CFNet ./checkpoint
+mv ./CFNet ./checkpoints
 ```
 
 ### Playground
