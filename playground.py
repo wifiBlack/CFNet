@@ -19,8 +19,8 @@ if __name__ == '__main__':
         y_change, Y1_change, Y2_change,Y1_unchange,Y2_unchange = net(x1, x2,device=device)
     loss = Loss()
     res = loss(y_change, Y1_change, Y2_change, Y1_unchange, Y2_unchange, target)
-    from fvcore.nn import FlopCountAnalysis,parameter_count_table
-    flops = FlopCountAnalysis(net, (x1, x2))
+    # from fvcore.nn import FlopCountAnalysis,parameter_count_table
+    # flops = FlopCountAnalysis(net, (x1, x2))
     total = sum([param.nelement() for param in net.parameters()])
     print("Params_Num: %.2fM" % (total/1e6))
     # print(flops.total()/1e9)
