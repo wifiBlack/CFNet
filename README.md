@@ -4,6 +4,7 @@ Official repository for the paper ["CFNet: Optimizing Remote Sensing Change Dete
 [[🤗Datasets](https://huggingface.co/datasets/wifibk/CFNet_Datasets/tree/main)]  [[🤗Checkpoints](https://huggingface.co/wifibk/CFNet/tree/main)]
 
 ## 🐣 News
+- **[2025.5.25]** The paper is accepted by **J-STARS** 🎉
 - **[2025.3.11]** We release the code and checkpoints for CFNet 🚀
 - **[2025.3.11]** We release the [arixv paper](https://arxiv.org/pdf/2503.08505) 🚀
 
