@@ -153,4 +153,12 @@ If this project contributes to your research or applications, please consider ci
       primaryClass={cs.CV},
       url={https://arxiv.org/abs/2503.08505}, 
 }
+
+@article{wu2025cfnet,
+  title={CFNet: Optimizing Remote Sensing Change Detection through Content-Aware Enhancement},
+  author={Wu, Fan and Dong, Sijun and Meng, Xiaoliang},
+  journal={IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing},
+  year={2025},
+  publisher={IEEE}
+}
 ```
