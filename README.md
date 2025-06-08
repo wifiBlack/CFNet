@@ -144,21 +144,23 @@ python test.py \
 ## ✅ Citation
 If this project contributes to your research or applications, please consider citing it using the following BibTeX:
 ```latex
-@misc{wu2025cfnetoptimizingremotesensing,
-      title={CFNet: Optimizing Remote Sensing Change Detection through Content-Aware Enhancement}, 
-      author={Fan Wu and Sijun Dong and Xiaoliang Meng},
-      year={2025},
-      eprint={2503.08505},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2503.08505}, 
+@article{
+    wu2025cfnet,
+    title={CFNet: Optimizing Remote Sensing Change Detection through Content-Aware Enhancement},
+    author={Wu, Fan and Dong, Sijun and Meng, Xiaoliang},
+    journal={IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing},
+    year={2025},
+    publisher={IEEE}
 }
 
-@article{wu2025cfnet,
-  title={CFNet: Optimizing Remote Sensing Change Detection through Content-Aware Enhancement},
-  author={Wu, Fan and Dong, Sijun and Meng, Xiaoliang},
-  journal={IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing},
-  year={2025},
-  publisher={IEEE}
+@misc{
+    wu2025cfnetoptimizingremotesensing,
+    title={CFNet: Optimizing Remote Sensing Change Detection through Content-Aware Enhancement}, 
+    author={Fan Wu and Sijun Dong and Xiaoliang Meng},
+    year={2025},
+    eprint={2503.08505},
+    archivePrefix={arXiv},
+    primaryClass={cs.CV},
+    url={https://arxiv.org/abs/2503.08505}, 
 }
 ```
