@@ -1,5 +1,5 @@
 # CFNet: Optimizing Remote Sensing 🗺️ Change Detection 🕵 through Content-Aware Enhancement
-Official repository for the paper ["CFNet: Optimizing Remote Sensing Change Detection through Content-Aware Enhancement"](https://arxiv.org/pdf/2503.08505).
+Official repository for the paper ["CFNet: Optimizing Remote Sensing Change Detection through Content-Aware Enhancement"](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=11016006).
 
 [[🤗Datasets](https://huggingface.co/datasets/wifibk/CFNet_Datasets/tree/main)]  [[🤗Checkpoints](https://huggingface.co/wifibk/CFNet/tree/main)]
 
